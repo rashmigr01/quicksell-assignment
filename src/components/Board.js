@@ -76,7 +76,7 @@ const Board = () => {
       <Filter setGroupBy={setGroupBy} setSortOption={setSortOption} />
       <div className="cards-container">
       {groupedAndSortedTickets.map((group) => (
-          <div key={group.group}>
+          <div key={group.group} style={{marginRight: "2rem"}}>
             <h2>{group.group}</h2>
             {group.tickets.map((ticket) => (
               <Card key={ticket.id} ticket={ticket} />

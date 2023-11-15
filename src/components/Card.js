@@ -14,14 +14,16 @@ const Card = ({ ticket }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <h4>{title}</h4>
-        <span className={`badge badge-${badgeColor[status]}`}>{status}</span>
+        <div class="id">{id}</div>
+        <div class="user">{userId}</div>
       </div>
       <div className="card-body">
-        <p>ID: {id}</p>
-        <p>Tags: {tag.join(', ')}</p>
-        <p>Assigned to: {userId}</p>
-        <p>Priority: {priority}</p>
+        <div class="title">{title}</div>
+        {/* <span className={`badge badge-${badgeColor[status]}`}>{status}</span> */}
+      </div>
+      <div className="card-footer">
+        <div class="tag">{tag}</div>
+        <div class="priority">{priority}</div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: #f0f0f0;
+    background-color: white;
     padding: 10px;
     display: flex;
     justify-content: flex-end;
@@ -11,12 +11,13 @@
   .menu-button {
     cursor: pointer;
     margin-right: auto;
+    padding: 10px;
   }
   
   .dropdown {
     position: absolute;
-    top: 30px;
-    left: 0;
+    top: 40px;
+    left: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 10px;
