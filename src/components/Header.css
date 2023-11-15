@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .menu-button {
+    cursor: pointer;
+    margin-right: auto;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  select {
+    margin-bottom: 10px;
+  }
+ 
