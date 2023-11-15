@@ -1,23 +1,15 @@
-import axios from 'axios';
+const BASE_URL = 'https://api.quicksell.co/v1/internal/frontend-assignment';
 
-const API_URL = 'https://api.quicksell.co/v1/internal/frontend-assignment';
-
-export const fetchTickets = async () => {
+export const fetchData = async () => {
   try {
-    const response = await axios.get(`${API_URL}/tickets`);
-    return response.data.tickets;
+    const response = await fetch(BASE_URL);
+    if (!response.ok) {
+      throw new Error(`Error fetching data: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data || { tickets: [], users: [] };
   } catch (error) {
-    console.error('Error fetching tickets:', error);
-    throw error;
-  }
-};
-
-export const fetchUsers = async () => {
-  try {
-    const response = await axios.get(`${API_URL}/users`);
-    return response.data.users;
-  } catch (error) {
-    console.error('Error fetching users:', error);
-    throw error;
+    console.error('Error fetching data:', error);
+    throw error; // Rethrow the error to propagate it to the caller
   }
 };
